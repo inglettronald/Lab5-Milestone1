@@ -53,7 +53,7 @@ public class NoteWritingActivity extends AppCompatActivity {
         String date = dateFormat.format(new Date());
         Log.i("Info", "Printing noteId before using in condition: " + noteId);
         if (noteId == -1) {
-            title = "NOTES_" + NotesActivity.notes.size();
+            title = "NOTES_" + (NotesActivity.notes.size() + 1);
             Log.i("Info", "printing content to be saved: " + newContent);
             dbHelper.saveNotes(username, title, date, newContent);
         } else {
